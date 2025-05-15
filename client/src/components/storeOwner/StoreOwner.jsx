@@ -127,6 +127,7 @@ export const StoreOwner = () => {
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Serial No</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User Name</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rating</th>
                 </tr>
               </thead>
@@ -142,6 +143,7 @@ export const StoreOwner = () => {
                     <tr key={ind} className="hover:bg-gray-50">
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{ind+1}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{rating.name}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{rating.email}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <span className="text-yellow-500">★</span> {rating.rating}
                     </td>

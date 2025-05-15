@@ -69,7 +69,7 @@ const storeController = {
       }
       const result = await dbConnection.query(
         `
-      SELECT u.name, r.rating
+      SELECT u.name, u.email, r.rating
       FROM ratings r
       JOIN users u ON r.user_id = u.id
       WHERE r.store_id = $1
