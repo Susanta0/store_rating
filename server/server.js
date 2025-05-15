@@ -11,7 +11,9 @@ require("dotenv").config();
 // Configure CORS
 app.use(cors({
   origin: ["https://store-rating-six.vercel.app","http://localhost:5173"],
-  credentials: true
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
 
