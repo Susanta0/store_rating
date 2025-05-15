@@ -7,8 +7,12 @@ const { ratingRoutes } = require("./src/routes/ratingsRoutes");
 const { dashboardRoutes } = require("./src/routes/dashboardRoutes");
 require("dotenv").config();
 
+// Configure CORS
+app.use(cors({
+  origin: ["https://store-rating-six.vercel.app/","http://localhost:5173"],
+  credentials: true
+}));
 app.use(express.json());
-app.use(cors());
 
 app.use("/api/user", userRoutes);
 app.use("/api/stores", storeRoutes);
