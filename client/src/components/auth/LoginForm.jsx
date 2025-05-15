@@ -30,11 +30,14 @@ const LoginForm = () => {
     try {
       const response = await api.post('/api/user/login', formData);
       if (response.status === 200) {
-        userLogin(response.data.token, response.data.user.name, response.data.user.role)
-        console.log(response.data.user.role);
+        userLogin(response.data.token, response.data.user.name, response.data.user.role, response.data.user.id)
+        
         if (response.data.user.role === 'system_administrator') {
           navigate('/admin'); // Redirect to system administrator page
-        } else {
+        } else if (response.data.user.role === "store_owner") {
+          navigate('/store_owner'); // Redirect to store manager page
+        }
+         else {
           navigate('/stores'); // Redirect to stores page for other roles
         }
       }

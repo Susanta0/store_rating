@@ -5,7 +5,7 @@ const { userRoutes } = require("./src/routes/usersRoutes");
 const { storeRoutes } = require("./src/routes/storeRoutes");
 const { ratingRoutes } = require("./src/routes/ratingsRoutes");
 const { dashboardRoutes } = require("./src/routes/dashboardRoutes");
-const { initializeDatabase } = require("./src/config/dbInit");
+// const { initializeDatabase } = require("./src/config/dbInit");
 require("dotenv").config();
 
 // Configure CORS
@@ -25,13 +25,13 @@ app.use("/api/admin", dashboardRoutes);
 const PORT = process.env.PORT || 5000;
 
 // Initialize database before starting the server
-initializeDatabase()
-  .then(() => {
+// initializeDatabase()
+//   .then(() => {
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
-  })
-  .catch(err => {
-    console.error('Failed to initialize database:', err);
-    process.exit(1);
-  });
+  // })
+  // .catch(err => {
+  //   console.error('Failed to initialize database:', err);
+  //   process.exit(1);
+  // });

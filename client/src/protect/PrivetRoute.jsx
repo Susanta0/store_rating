@@ -12,5 +12,9 @@ export const PrivetRoute=({children, allowedRoles})=>{
  if (allowedRoles && !allowedRoles.includes(loginStatus.role)) {
    return <Navigate to={loginStatus.role === 'system_administrator' ? '/admin' : '/stores'} />;
  }
+
+ if (allowedRoles && !allowedRoles.includes(loginStatus.role)) {
+   return <Navigate to={loginStatus.role === 'store_owner' ? '/store_owner' : '/stores'} />;
+ }
  return children
 }

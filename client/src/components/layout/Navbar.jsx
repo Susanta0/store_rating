@@ -32,7 +32,10 @@ const Navbar = () => {
                     <Link to="/stores" className="hover:text-blue-200">Stores</Link>
                   )}
                 {loginStatus.role === 'system_administrator' && (
-                    <Link to="/admin" className="hover:text-blue-200">Admin</Link>
+                    <Link to="/admin" className="hover:text-blue-200">System Administrator</Link>
+                  )}
+                {loginStatus.role === 'store_owner' && (
+                    <Link to="/store_owner" className="hover:text-blue-200">Store Owner</Link>
                   )}
               </div>
               

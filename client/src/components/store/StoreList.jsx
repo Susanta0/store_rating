@@ -20,8 +20,6 @@ const StoreList = () => {
       try {
         setLoading(true);
         const response = await api.get('/api/stores');
-        console.log(response.data);
-        
         setStores(response.data);
         setFilteredStores(response.data);
       } catch (err) {
@@ -86,16 +84,14 @@ const StoreList = () => {
   };
   
   
-  // Open modal for rating
   const openRatingModal = (store, editing = false) => {
     setSelectedStore(store);
     setIsEditing(editing);
     setRatingValue(editing && store.user_rating && store.user_rating.rating ? store.user_rating.rating : 0);
     setRatingModalOpen(true);
-    setError(null); // Clear any previous errors when opening the modal
+    setError(null); 
   };
   
-  // Close rating modal
   const closeRatingModal = () => {
     setRatingModalOpen(false);
     setSelectedStore(null);
@@ -103,7 +99,7 @@ const StoreList = () => {
     setIsEditing(false);
   };
   
-  // Star rating component
+
   const StarRating = ({ value, onChange, editable = false }) => {
     return (
       <div className="flex">

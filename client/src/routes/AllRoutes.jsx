@@ -5,6 +5,7 @@ import LoginForm from "../components/auth/LoginForm"
 import SignupForm from "../components/auth/SignupForm"
 import UpdatePassword from "../components/user/UpdatePassword"
 import SystemAdministrator from "../components/systemAdministrator/SystemAdministrator"
+import { StoreOwner } from "../components/storeOwner/StoreOwner"
 
 export const AllRoutes=()=>{
     return (
@@ -27,6 +28,14 @@ export const AllRoutes=()=>{
             element={
           <PrivetRoute allowedRoles={['system_administrator']}>
             <SystemAdministrator/>
+          </PrivetRoute>
+        }
+      />
+            <Route
+            path="/store_owner"
+            element={
+          <PrivetRoute allowedRoles={['store_owner']}>
+            <StoreOwner/>
           </PrivetRoute>
         }
       />

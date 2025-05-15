@@ -56,6 +56,7 @@ const storeController = {
       res.status(400).json({ message: error.message });
     }
   },
+  
   getStoreRatings: async (req, res) => {
     const { storeId } = req.params;
     try {
