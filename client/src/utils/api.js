@@ -5,7 +5,7 @@ const baseUrl= isProduction? "":"https://store-rating-n3o2.onrender.com"
 
 const api= axios.create({
     baseURL: baseUrl,
-    withCredentials:true
+    withCredentials:false
 })
 
 // Add a request interceptor to always use the latest token
