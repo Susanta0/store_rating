@@ -777,7 +777,7 @@ const SystemAdministrator = () => {
     try {
       await api.post("/api/stores/addstore", storeForm);
       alert("Store added successfully");
-      setStoreForm({ name: "", email: "", address: "", owner_id: "" });
+      setStoreForm({ name: "", email: "", address: "", store_owner_id: "" });
       setStoreErrors({});
       // Refresh store list
       const params = new URLSearchParams({ ...storeFilters, ...storeSort });
