@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const isProduction = window.location.hostname !== "localhost";
-const baseUrl= isProduction? "":"http://localhost:8000"
+const baseUrl= isProduction? "":"https://store-rating-n3o2.onrender.com"
 
 const api= axios.create({
     baseURL: baseUrl,
