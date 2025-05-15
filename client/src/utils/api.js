@@ -2,10 +2,12 @@ import axios from "axios"
 
 const isProduction = window.location.hostname !== "localhost";
 const baseUrl= isProduction? "https://store-rating-n3o2.onrender.com":"http://localhost:8000"
+console.log(window.location.hostname);
+console.log(baseUrl);
 
 const api= axios.create({
     baseURL: baseUrl,
-    withCredentials:true
+    withCredentials:false
 })
 
 // Add a request interceptor to always use the latest token

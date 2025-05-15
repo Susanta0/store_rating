@@ -6,7 +6,6 @@ import { User, LogOut, Lock, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
     const{loginStatus, userLogout}= useContext(AuthContext)
-    console.log(loginStatus.role);
     
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -19,38 +18,6 @@ const Navbar = () => {
       setDropdownOpen(false);
     };
   return (
-    // <nav className="bg-blue-600 text-white shadow-md">
-    //   <div className="container mx-auto px-4 py-3">
-    //     <div className="flex justify-between items-center">
-    //       <Link to="/" className="text-xl font-bold">Store Rating System</Link>
-          
-    //       <div className="flex items-center space-x-4">
-    //         {loginStatus.isLoggedIn ? (
-    //           <>
-    //             <span className="hidden md:inline">Welcome, {loginStatus.userName}</span>
-    //             <Link to="/stores" className="hover:text-blue-200">Stores</Link>
-    //             <button 
-    //               onClick={userLogout}
-    //               className="bg-white text-blue-600 px-3 py-1 rounded hover:bg-blue-100"
-    //             >
-    //               Logout
-    //             </button>
-    //           </>
-    //         ) : (
-    //           <>
-    //             <Link to="/login" className="hover:text-blue-200">Login</Link>
-    //             <Link 
-    //               to="/signup" 
-    //               className="bg-white text-blue-600 px-3 py-1 rounded hover:bg-blue-100"
-    //             >
-    //               Sign Up
-    //             </Link>
-    //           </>
-    //         )}
-    //       </div>
-    //     </div>
-    //   </div>
-    // </nav>
 
     <nav className="bg-blue-600 text-white shadow-md">
     <div className="container mx-auto px-4 py-3">
