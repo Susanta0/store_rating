@@ -170,9 +170,9 @@ This project was developed as part of a FullStack Intern Coding Challenge. Users
 
 | Role        | Email                | Password     |
 | ----------- | -------------------- | ------------ |
-| Susanta     |susanta721467@gmail.com| Susanta@123 |
-| example1    | example1@gmail.com   | Example@123  |
-| Tapas       | tapas@gmail.com      | Tapas@123    |
+| system admin|susanta721467@gmail.com| Susanta@123 |
+| normal user | example1@gmail.com   | Example@123  |
+| store owner | tapas@gmail.com      | Tapas@123    |
 
 > Replace with real test accounts from your deployed app.
 
