@@ -6,7 +6,7 @@ Welcome to the **Store Ratings Platform**, a full-stack web application that ena
 
 ## 🔗 Live Demo Link
 
-* 🌐 Main Application: [Insert Link]
+* 🌐 Main Application: [https://store-rating-six.vercel.app/]
 
 > After logging in, users are automatically directed to the appropriate interface based on their role (Normal User, System Administrator, or Store Owner).
 
